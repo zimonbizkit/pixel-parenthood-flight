@@ -9,13 +9,24 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-gray-600">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 underline hover:text-blue-700">
-          Return to Home
-        </a>
+    <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="text-center space-y-6">
+        <div className="animate-retro-fade-in">
+          <h1 className="text-8xl font-retro font-black text-primary animate-retro-blink">404</h1>
+          <h2 className="text-2xl font-retro text-accent">GAME OVER</h2>
+        </div>
+        <div className="bg-card/90 backdrop-blur-sm p-6 rounded border-2 border-primary shadow-retro max-w-md mx-auto">
+          <p className="font-mono text-card-foreground mb-4">
+            🎮 ERROR: Level not found!<br/>
+            The adventurers seem to have taken a wrong turn...
+          </p>
+          <a 
+            href="/" 
+            className="inline-block bg-primary text-primary-foreground px-6 py-3 font-mono font-bold rounded border-2 border-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 shadow-pixel hover:shadow-retro"
+          >
+            🏠 Return to Base
+          </a>
+        </div>
       </div>
     </div>
   );
