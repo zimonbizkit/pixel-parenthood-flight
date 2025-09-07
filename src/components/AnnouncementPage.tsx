@@ -6,7 +6,7 @@ import { WelcomeHint } from "@/components/WelcomeHint";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import mountainBg from "@/assets/mountain-landscape-faithful.jpg";
+import mountainBg from "@/assets/mountain-landscape-final.png";
 
 export const AnnouncementPage = () => {
   const [planeMessage, setPlaneMessage] = useState("Our Little Adventure Begins!");
@@ -53,7 +53,7 @@ export const AnnouncementPage = () => {
             backgroundSize: '150% auto',
             backgroundPosition: '0% center',
             backgroundRepeat: 'no-repeat',
-            animation: 'parallax-move 30s linear infinite',
+            animation: 'parallax-move 60s linear infinite',
           }}
         />
 
