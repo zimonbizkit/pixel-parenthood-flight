@@ -45,15 +45,15 @@ export const AnnouncementPage = () => {
   return (
     <TimeBasedBackground>
       <div className="relative min-h-screen overflow-hidden">
-        {/* Mountain Background */}
+        {/* Mountain Background with Parallax */}
         <div 
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-70"
           style={{
             backgroundImage: `url(${mountainBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: '150% auto',
+            backgroundPosition: '0% center',
             backgroundRepeat: 'no-repeat',
-            imageRendering: 'pixelated',
+            animation: 'parallax-move 30s linear infinite',
           }}
         />
 

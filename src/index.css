@@ -157,4 +157,27 @@ Pixel Art Adventure Theme - Inspired by mountain landscapes and retro gaming
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--accent));
   }
+  
+  /* Retro Gaming Animations */
+  @keyframes retro-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.7; }
+  }
+  
+  @keyframes retro-fade-in {
+    from { 
+      opacity: 0; 
+      transform: translateY(20px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  /* Parallax Animation */
+  @keyframes parallax-move {
+    0% { background-position: 0% center; }
+    100% { background-position: -50% center; }
+  }
 }
