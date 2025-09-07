@@ -6,7 +6,7 @@ import { WelcomeHint } from "@/components/WelcomeHint";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import mountainBg from "@/assets/mountain-landscape-pixel-accurate.jpg";
+import mountainBg from "@/assets/mountain-landscape-faithful.jpg";
 
 export const AnnouncementPage = () => {
   const [planeMessage, setPlaneMessage] = useState("Our Little Adventure Begins!");
