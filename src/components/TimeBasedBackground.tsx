@@ -10,6 +10,16 @@ export const TimeBasedBackground = ({ children }: TimeBasedBackgroundProps) => {
   const [timeOfDay, setTimeOfDay] = useState<TimeOfDay>('midday');
 
   useEffect(() => {
+    // Check for URL parameter first
+    const urlParams = new URLSearchParams(window.location.search);
+    const themeParam = urlParams.get('theme');
+    
+    if (themeParam) {
+      // Override with URL parameter if provided
+      setTimeOfDay(themeParam as TimeOfDay);
+      return;
+    }
+
     const getTimeOfDay = (): TimeOfDay => {
       const hour = new Date().getHours();
       
@@ -22,7 +32,7 @@ export const TimeBasedBackground = ({ children }: TimeBasedBackgroundProps) => {
 
     setTimeOfDay(getTimeOfDay());
 
-    // Update every minute to catch time changes
+    // Update every minute to catch time changes (only if no URL parameter)
     const interval = setInterval(() => {
       setTimeOfDay(getTimeOfDay());
     }, 60000);
@@ -55,6 +65,7 @@ export const TimeBasedBackground = ({ children }: TimeBasedBackgroundProps) => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       }}
+      data-theme={timeOfDay}
     >
       {children}
     </div>

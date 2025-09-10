@@ -203,4 +203,95 @@ Pixel Art Adventure Theme - Inspired by mountain landscapes and retro gaming
     0% { transform: translateX(0); }
     100% { transform: translateX(-100vw); }
   }
+
+  /* Mobile Portrait Responsive Images */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .mobile-portrait-image {
+      max-height: 35vh !important;
+      max-width: 50vw !important;
+    }
+  }
+
+  /* Theme-aware text colors */
+  /* Day themes (dawn, morning, midday, afternoon) - use dark greenish colors */
+  [data-theme="dawn"] .theme-title,
+  [data-theme="morning"] .theme-title,
+  [data-theme="midday"] .theme-title,
+  [data-theme="afternoon"] .theme-title {
+    color: rgb(2, 69, 163) !important; /* dark gray */
+  }
+
+  [data-theme="dawn"] .theme-subtitle,
+  [data-theme="morning"] .theme-subtitle,
+  [data-theme="midday"] .theme-subtitle,
+  [data-theme="afternoon"] .theme-subtitle {
+    color: #065f46 !important; /* dark green */
+  }
+
+  [data-theme="dawn"] .theme-card,
+  [data-theme="morning"] .theme-card,.
+  
+  [data-theme="midday"] .theme-card,
+  [data-theme="afternoon"] .theme-card {
+    background-color: rgb(2, 69, 163) !important; /* dark background */
+    border-color: #5964ff !important; /* dark green border */
+  }
+
+  [data-theme="dawn"] .theme-text,
+  [data-theme="morning"] .theme-text,
+  [data-theme="midday"] .theme-text,
+  [data-theme="afternoon"] .theme-text {
+    color: #f9fafb !important; /* light text */
+  }
+
+  [data-theme="dawn"] .theme-accent-1,
+  [data-theme="morning"] .theme-accent-1,
+  [data-theme="midday"] .theme-accent-1,
+  [data-theme="afternoon"] .theme-accent-1 {
+    color: #10b981 !important; /* bright green */
+  }
+
+  [data-theme="dawn"] .theme-accent-2,
+  [data-theme="morning"] .theme-accent-2,
+  [data-theme="midday"] .theme-accent-2,
+  [data-theme="afternoon"] .theme-accent-2 {
+    color: #f59e0b !important; /* amber */
+  }
+
+  [data-theme="dawn"] .theme-accent-3,
+  [data-theme="morning"] .theme-accent-3,
+  [data-theme="midday"] .theme-accent-3,
+  [data-theme="afternoon"] .theme-accent-3 {
+    color: #ec4899 !important; /* pink */
+  }
+
+  /* Night theme (evening) - use light colors */
+  [data-theme="evening"] .theme-title {
+    color: #ffffff !important; /* light yellow */
+  }
+
+  [data-theme="evening"] .theme-subtitle {
+    color: #60a5fa !important; /* light blue */
+  }
+
+  [data-theme="evening"] .theme-card {
+    background-color: rgba(255, 255, 255, 0.1) !important; /* light background */
+    border-color: #fff9eaab !important; /* light yellow border */
+  }
+
+  [data-theme="evening"] .theme-text {
+    color: #f9fafb !important; /* light text */
+  }
+
+  [data-theme="evening"] .theme-accent-1 {
+    color: #34d399 !important; /* light green */
+  }
+
+  [data-theme="evening"] .theme-accent-2 {
+    color: #fbbf24 !important; /* light yellow */
+  }
+
+  [data-theme="evening"] .theme-accent-3 {
+    color: #f472b6 !important; /* light pink */
+  }
 }

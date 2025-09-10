@@ -21,74 +21,67 @@ export const AnnouncementPage = () => {
           }}
         />
 
-        {/* Overlay Images with Parallax */}
-        <div className="absolute bottom-0 left-0 w-full h-1/3 pointer-events-none">
-          {/* Eliedu Image - Starts in center and scrolls left */}
-          <div 
-            className="absolute"
+        {/* Fixed Overlay Images */}
+        {/* Eliedu Image - Bottom Left */}
+        <div 
+          className="fixed bottom-0 left-0 pointer-events-none z-20"
+          style={{
+            maxHeight: '50vh',
+          }}
+        >
+          <img
+            src={elieduImage}
+            alt="Eliedu"
+            className="w-auto h-full object-contain mobile-portrait-image"
             style={{
-              left: '50%',
-              bottom: '0%',
-              transform: 'translateX(-50%)',
-              animation: 'center-scroll-left 60s linear infinite',
+              imageRendering: 'auto',
+              maxHeight: '50vh',
             }}
-          >
-            <img
-              src={elieduImage}
-              alt="Eliedu"
-              className="w-auto"
-              style={{
-                imageRendering: 'auto',
-                height: '80vh',
-                objectFit: 'contain',
-                objectPosition: 'bottom',
-              }}
-            />
-          </div>
-          
-          {/* Jazzfreya Image - Scrolling from right to left, delayed */}
-          <div 
-            className="absolute bottom-0 h-full"
+          />
+        </div>
+        
+        {/* Jazzfreya Image - Bottom Right */}
+        <div 
+          className="fixed bottom-0 right-0 pointer-events-none z-20"
+          style={{
+            maxHeight: '50vh',
+          }}
+        >
+          <img
+            src={jazzfreyaImage}
+            alt="Jazzfreya"
+            className="w-auto h-full object-contain mobile-portrait-image"
             style={{
-              left: '0%',
-              animation: 'image-scroll-reverse 60s linear infinite 20s',
+              imageRendering: 'auto',
+              maxHeight: '50vh',
             }}
-          >
-            <img
-              src={jazzfreyaImage}
-              alt="Jazzfreya"
-              className="h-full w-auto object-contain"
-              style={{
-                imageRendering: 'auto',
-              }}
-            />
-          </div>
+          />
         </div>
 
         {/* Welcome Hint */}
         <WelcomeHint />
 
         {/* Main Content */}
-        <div className="relative z-10 flex flex-col items-center justify-top min-h-screen px-4" style={{ paddingTop: '15vh' }}>
+        <div className="relative z-10 flex flex-col items-center justify-Ttop min-h-screen px-4" style={{ paddingTop: '15vh' }}>
           <div className="text-center space-y-8 animate-retro-fade-in">
             {/* Main Announcement */}
             <div className="space-y-4">
-              <h3 className="text-xxl md:text-2xl font-pixel font-black text-pink-blue shadow-retro animate-retro-blink">
+              <h3 className="text-xxl md:text-2xl font-pixel font-black theme-title shadow-retro animate-retro-blink">
               AUGMENTEM FAMÍLIA!
               </h3>
-              <h4 className="text-xxl md:text-xxl font-pixel font-bold text-cyan-200">
+              <h4 className="text-xxl md:text-xxl font-pixel font-bold theme-subtitle">
                 Una preciosa nena està en camí
               </h4>
             </div>
 
             {/* Details */}
             <div className="max-w-l mx-auto space-y-6">
-              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-lg border-2 border-pink-200 shadow-retro">
-                <p className="text-lg md:text-l font-pixel text-white leading-relaxed">
+              <div className="theme-card backdrop-blur-sm p-6 rounded-lg border-2 shadow-retro">
+                <p className="text-lg md:text-l font-pixel theme-text leading-relaxed">
                   
-                  📅 <strong className="text-cyan-100">Arribada:</strong> Febrer 2026 <br/>
-                  💕 <strong className="text-pink-100">El seu nom és:</strong> ???? <br/>
-                  💕 <strong className="text-orange-100">NIVELL D'ILUSIÓ:</strong> A TOPE 🔥 <br/>
+                  📅 <strong className="theme-accent-1">Arribada:</strong> Febrer 2026 <br/>
+                  💕 <strong className="theme-accent-2">El seu nom és:</strong> ???? <br/>
+                  💕 <strong className="theme-accent-3">NIVELL D'ILUSIÓ:</strong> A TOPE 🔥 <br/>
                 </p>
               </div>
             </div>
