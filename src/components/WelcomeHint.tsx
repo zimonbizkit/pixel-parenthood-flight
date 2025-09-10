@@ -23,12 +23,6 @@ export const WelcomeHint = () => {
   if (!visible) return null;
 
   return (
-    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-30 animate-retro-fade-in">
-      <div className="bg-card/95 backdrop-blur-sm px-4 py-2 rounded border-2 border-retro-cyan shadow-retro">
-        <p className="font-mono text-sm text-card-foreground text-center">
-          🎮 <span className="text-retro-cyan">TIP:</span> Click the plane to discover something special! ✈️
-        </p>
-      </div>
-    </div>
+    <div></div>
   );
 };
